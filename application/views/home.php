@@ -83,7 +83,7 @@
         <br>
         <div class="row">
         	<div class="col-sm-3">
-        		<button class="btn bg-success btn-block"><i class="fas fa-plus-circle"></i> &nbsp;&nbsp; Arsipkan Surat..</button>
+        		<a href="<?= base_url('c_addarsip') ?>" class="btn bg-success btn-block"><i class="fas fa-plus-circle"></i> &nbsp;&nbsp; Arsipkan Surat..</a>
         	</div>
         </div>
 

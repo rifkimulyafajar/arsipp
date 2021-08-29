@@ -1,7 +1,7 @@
   <footer class="main-footer">
   <!--  <strong>Copyright &copy; 2021 <a href="https://adminlte.io">AdminLTE.io</a> SMA ISLAM KEPANJEN </strong> --> &nbsp;
     <div class="float-right d-none d-sm-inline-block">
-      <strong>Copyright &copy; 2021 SMA ISLAM KEPANJEN </strong>
+      <!-- <strong>Copyright &copy; 2021 SMA ISLAM KEPANJEN</strong> -->
     </div>
   </footer>
 
