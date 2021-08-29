@@ -26,20 +26,8 @@
               Judul : <?= $detail['judul'] ?> <br>
               Waktu Unggah : <?= $detail['waktu'] ?>
             </p>
-
-            <?php  
-            // $file = base_url('upload/'.$detail['file']); 
-            // $filename = $detail['file'];
-            // header('Content-type: application/pdf'); 
-            // header('Content-Disposition: inline; filename="' . $filename . '"'); 
-            // header('Content-Transfer-Encoding: binary'); 
-            // header('Accept-Ranges: bytes'); 
-            // @readfile($file);
-            ?>
             
-            <!-- <embed type="application/pdf" width="100%" src="<?= base_url('upload/'.$detail["file"]) ?>"></embed> -->
-            <iframe src="<?= base_url('upload/'.$detail["file"]) ?>" width="100%" height="70%"></iframe>
-            <!-- <object data="<?= base_url('upload/'.$detail["file"]) ?>"></object> -->
+            <iframe src="<?= base_url('upload/'.$detail["file"]) ?>" width="100%" height="350"></iframe>
 
           </div>
           <div class="col-lg-1"></div>
