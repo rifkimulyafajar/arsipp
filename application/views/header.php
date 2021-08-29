@@ -66,7 +66,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="<?= base_url('c_home') ?>" class="nav-link">
+            <a href="<?= base_url('c_arsip') ?>" class="nav-link">
               <i class="nav-icon fas fa-star"></i>
               <p>
                 Arsip
@@ -74,7 +74,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('c_about') ?>" class="nav-link">
+            <a href="<?= base_url('c_arsip/about') ?>" class="nav-link">
               <i class="nav-icon fas fa-info-circle"></i>
               <p>
                 About

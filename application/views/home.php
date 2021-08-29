@@ -21,15 +21,18 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-1"><h5>Cari Surat:</h5></div>
-          <div class="col-lg-9">
-          	<input type="" class="form-control" name="" placeholder=" Cari">
+        <form action="<?= base_url('c_arsip') ?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+          <div class="row">
+            <div class="col-lg-1"><h5>Cari Surat:</h5></div>
+            <div class="col-lg-9">
+            	<input type="text" class="form-control" name="cari" placeholder="Cari" <?php if (isset($_POST['cari'])):?> value="<?= $_POST['cari'] ?>" <?php endif ?>>
+            </div>
+            <div class="col-lg-2">
+            	<button type="submit" class="btn btn-block bg-secondary">Cari &nbsp; <i class="fas fa-search"></i></button>
+            </div>
           </div>
-          <div class="col-lg-2">
-          	<button class="btn btn-block bg-success">Cari &nbsp; <i class="fas fa-search"></i></button>
-          </div>
-        </div> <br>
+        </form>
+        <br>
 
         <div class="row">
           <div class="col-lg-12">
@@ -44,28 +47,52 @@
                 </tr>
               </thead>
               <tbody>
+
+                <?php foreach ($arsip as $a) { ?>
+
                 <tr>
-                  <td>2020/PD3/TU/001</td>
-                  <td>Pengumuman</td>
-                  <td>Nota Dinas WFH</td>
-                  <td>2021-06-21 17:23</td>
-                  <td>
-                  	<button class="btn-danger"><i class="fas fa-trash"></i> Hapus</button> &nbsp;
-                  	<button class="btn-success"><i class="fas fa-download"></i> Unduh</button> &nbsp;
-                  	<button class="btn-info"><i class="fas fa-eye"></i> Lihat</button>
+                  <td><?= $a['nomor_surat'] ?></td>
+                  <td><?= $a['kategori'] ?></td>
+                  <td><?= $a['judul'] ?></td>
+                  <td><?= $a['waktu'] ?></td>
+                  <td class="text-center">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus<?= $a['id'] ?>">
+                      <i class="fas fa-trash"></i> &nbsp; Hapus
+                    </button> &nbsp;
+                    <a href="<?= base_url('c_arsip/unduh/').$a['id']; ?>" class="btn btn-warning">
+                      <i class="fas fa-download"></i> &nbsp; Unduh
+                    </a> &nbsp;
+                    <a href="<?= base_url('c_arsip/detail/').$a['id']; ?>" class="btn btn-info">
+                      <i class="fas fa-eye"></i> &nbsp; Lihat
+                    </a>
                   </td>
+
+  <div class="modal fade" id="hapus-<?= $a['id'] ?>">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Apakah Anda yakin ingin menghapus arsip surat ini?</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+          <a href="<?= base_url('c_arsip/delete/').$a['id']; ?>" type="button" class="btn btn-danger">Ya!</a>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
                 </tr>
-                <tr>
-                  <td>2020/PD2/TU/002</td>
-                  <td>Undangan</td>
-                  <td>Undangan Halal Bi Halal</td>
-                  <td>2021-04-21 18:23</td>
-                  <td>
-                  	<button class="btn-danger"><i class="fas fa-trash"></i> Hapus</button> &nbsp;
-                  	<button class="btn-success"><i class="fas fa-download"></i> Unduh</button> &nbsp;
-                  	<button class="btn-info"><i class="fas fa-eye"></i> Lihat</button>
-                  </td>
-                </tr>
+
+                <?php } ?>
+
               </tbody>
               <tfoot>
                 <tr class="text-center">
@@ -83,7 +110,7 @@
         <br>
         <div class="row">
         	<div class="col-sm-3">
-        		<a href="<?= base_url('c_addarsip') ?>" class="btn bg-success btn-block"><i class="fas fa-plus-circle"></i> &nbsp;&nbsp; Arsipkan Surat..</a>
+        		<a href="<?= base_url('c_arsip/add') ?>" class="btn bg-success btn-block"><i class="fas fa-plus-circle"></i> &nbsp;&nbsp; Arsipkan Surat..</a>
         	</div>
         </div>
 

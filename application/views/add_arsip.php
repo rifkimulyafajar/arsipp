@@ -26,13 +26,14 @@
             </p>
             <br><br>
 
-            <form action="<?= base_url('c_addarsip/unggah') ?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+            <form action="<?= base_url('c_arsip/add') ?>" enctype="multipart/form-data" method="post" accept-charset="utf-8">
               <div class="row form-group">
                 <div class="col-lg-2">
                   Nomor Surat
                 </div>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" name="nomor" placeholder="Nomor Surat">
+                  <input type="text" class="form-control" name="nomor" placeholder="Nomor Surat" value="<?= set_value('nomor'); ?>">
+                  <?= form_error('nomor', '<small class="text-danger">', '</small>'); ?>
                 </div>
               </div>
               <div class="row form-group">
@@ -41,9 +42,9 @@
                 </div>
                 <div class="col-lg-10">
                   <select class="custom-select rounded-0" name="kategori">
-                    <option value="undangan">Undangan</option>
-                    <option value="pengumumam">Pengumuman</option>
-                    <option value="notadinas">Nota Dinas</option>
+                    <option value="Undangan">Undangan</option>
+                    <option value="Pengumumam">Pengumuman</option>
+                    <option value="Nota Dinas">Nota Dinas</option>
                   </select>
                 </div>
               </div>
@@ -52,7 +53,8 @@
                   Judul
                 </div>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" name="judul" placeholder="Judul Surat">
+                  <input type="text" class="form-control" name="judul" placeholder="Judul Surat" value="<?= set_value('judul'); ?>">
+                  <?= form_error('judul', '<small class="text-danger">', '</small>'); ?>
                 </div>
               </div>
               <div class="row form-group">
@@ -60,10 +62,18 @@
                   File Surat (PDF)
                 </div>
                 <div class="col-lg-10">
-                  <input type="file" class="form-control" name="file">
+                  <input type="file" class="form-control" name="file" value="<?= set_value('file'); ?>">
+                  <?= form_error('file', '<small class="text-danger">', '</small>'); ?>
                 </div>
               </div>
               <br>
+
+              <?php
+                date_default_timezone_set("Asia/Jakarta");
+                $waktu = date("Y-m-d H:i:s");
+              ?>
+
+              <input type="hidden" name="waktu" value="<?= $waktu; ?>">
 
               <div class="row">
                 <div class="col-lg-12">
