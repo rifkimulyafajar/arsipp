@@ -43,12 +43,33 @@ class C_Arsip extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('header', $data);
-			$this->load->view('add_arsip');
+			$this->load->view('add');
 			$this->load->view('footer');
 		}
 		else {
 			$this->M_Arsip->tambahArsip();
 			echo "<script>alert('Anda berhasil mengunggah arsip');</script>";
+			redirect('c_arsip', 'refresh');
+		}
+	}
+
+	public function edit($id)
+	{
+		// code...
+		$data['title'] = 'Edit/Ganti File';
+		$data['detail'] = $this->M_Arsip->getById($id);
+
+		$this->form_validation->set_rules('nomor', 'Nomor Surat', 'required', array('required' => 'Nomor Surat Tidak Boleh Kosong !!'));
+		$this->form_validation->set_rules('judul', 'Judul Surat', 'required', array('required' => 'Judul Surat Tidak Boleh Kosong !!'));
+
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('header', $data);
+			$this->load->view('edit', $data);
+			$this->load->view('footer');
+		}
+		else {
+			$this->M_Arsip->editArsip($id);
+			echo "<script>alert('Anda berhasil mengubah arsip');</script>";
 			redirect('c_arsip', 'refresh');
 		}
 	}
@@ -70,6 +91,17 @@ class C_Arsip extends CI_Controller {
 			echo "<script>alert('Data Arsip Terhapus');</script>";
 			redirect('c_arsip', 'refresh');
 		}
+	}
+
+	public function detail($id)
+	{
+		// code...
+		$data['title'] = 'Lihat';
+		$data['detail'] = $this->M_Arsip->getById($id);
+
+		$this->load->view('header', $data);
+		$this->load->view('detail', $data);
+		$this->load->view('footer');
 	}
 
 

@@ -6,7 +6,7 @@
         <div class="row mb-2">
           <div class="col-sm-1"></div>
           <div class="col-sm-11">
-          	<h1 class="m-0">About Me</h1>
+          	<h1 class="m-0">About</h1>
           </div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -26,7 +26,7 @@
           	<p>Aplikasi Ini Dibuat Oleh :</p>
             <p>Nama : Rifki Mulya Fajar <br>
             NIM : 1831710096 <br>
-            Tanggal : 29 Agustus 2021 </p>
+            Tanggal : 28 Agustus 2021 </p>
           </div>
         </div>
 

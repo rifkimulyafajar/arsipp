@@ -6,11 +6,11 @@
         <div class="row mb-2">
           <div class="col-sm-2"></div>
           <div class="col-sm-10">
-          	<h1 class="m-0">Arsip Surat</h1>
+          	<h1 class="m-0"><b>Arsip Surat</b></h1>
             <p>
             	Berikut ini adalah surat-surat yang telah terbit dan diarsipkan <br>
             	Klik "Lihat" pada kolom aksi untuk menampilkan surat
-        	</p> 
+        	  </p> 
           </div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -36,7 +36,7 @@
 
         <div class="row">
           <div class="col-lg-12">
-          	<table id="example1" class="table table-bordered table-striped">
+          	<table id="" class="table table-bordered table-striped">
               <thead>
                 <tr class="text-center">
                   <th>No. Surat</th>
@@ -56,7 +56,7 @@
                   <td><?= $a['judul'] ?></td>
                   <td><?= $a['waktu'] ?></td>
                   <td class="text-center">
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus<?= $a['id'] ?>">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus-<?= $a['id'] ?>">
                       <i class="fas fa-trash"></i> &nbsp; Hapus
                     </button> &nbsp;
                     <a href="<?= base_url('c_arsip/unduh/').$a['id']; ?>" class="btn btn-warning">
@@ -68,19 +68,26 @@
                   </td>
 
   <div class="modal fade" id="hapus-<?= $a['id'] ?>">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Apakah Anda yakin ingin menghapus arsip surat ini?</h4>
+          <h4 class="modal-title-centered">Alert</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
+          <h4 class="modal-title text-center">Apakah Anda yakin ingin menghapus arsip surat ini?</h4>
         </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-          <a href="<?= base_url('c_arsip/delete/').$a['id']; ?>" type="button" class="btn btn-danger">Ya!</a>
+        <div class="modal-footer">
+          <div class="row col-lg-12">
+              <div class="col-lg-6">
+                <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Batal</button>
+              </div>
+              <div class="col-lg-6">
+                <a href="<?= base_url('c_arsip/delete/').$a['id']; ?>" type="button" class="btn btn-danger btn-block">Ya!</a>
+              </div>
+          </div>
         </div>
       </div>
       <!-- /.modal-content -->

@@ -10,6 +10,12 @@ class M_Arsip extends CI_Model
         return $query->result_array();
     }
 
+    public function getById($id)
+    {
+        // code...
+        return $this->db->get_where('surat', array('id' =>  $id))->row_array();
+    }
+
     public function cariArsip($key)
     {
         // code...
@@ -35,6 +41,27 @@ class M_Arsip extends CI_Model
         ];
 
         $this->db->insert('surat', $data);
+    }
+
+    public function editArsip($id)
+    {
+        // code...
+        $post = $this->input->post();
+
+        $this->id = $id;
+        $this->nomor_surat = $post['nomor'];
+        $this->kategori = $post['kategori'];
+        $this->judul = $post['judul'];
+
+        if (!empty($_FILES["file"]["name"])) {
+            $this->file = $this->uploadFile();
+        } else {
+            $this->file = $post["before"];
+        }
+
+        $this->waktu = $post['waktu'];
+
+        $this->db->update('surat', $this, array('id' => $id));
     }
 
     public function uploadFile()

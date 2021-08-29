@@ -6,7 +6,7 @@
         <div class="row mb-2">
           <div class="col-sm-1"></div>
           <div class="col-sm-11">
-          	<h1 class="m-0">Arsip Surat &nbsp; >> &nbsp; Unggah</h1>
+          	<h1 class="m-0"><b>Arsip Surat &nbsp; >> &nbsp; Unggah</b></h1>
           </div>
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -62,7 +62,7 @@
                   File Surat (PDF)
                 </div>
                 <div class="col-lg-10">
-                  <input type="file" class="form-control" name="file" value="<?= set_value('file'); ?>">
+                  <input type="file" class="form-control" name="file" accept="application/pdf" value="<?= set_value('file'); ?>">
                   <?= form_error('file', '<small class="text-danger">', '</small>'); ?>
                 </div>
               </div>
@@ -77,7 +77,7 @@
 
               <div class="row">
                 <div class="col-lg-12">
-                  <a href="<?= base_url('c_home') ?>" class="btn bg-info"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i> &nbsp; Kembali</a>
+                  <a href="<?= base_url('c_arsip') ?>" class="btn bg-info"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i> &nbsp; Kembali</a>
                   &nbsp;&nbsp;&nbsp;
                   <button type="submit" class="btn bg-success"><i class="fas fa-save"></i> &nbsp;&nbsp;&nbsp; Simpan</button>
                 </div>
