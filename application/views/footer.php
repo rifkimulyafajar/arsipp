@@ -44,24 +44,5 @@
   });
 </script>
 
-<!-- CK Editor -->
-<script src="<?php echo base_url('asset/ckeditor/ckeditor.js')?>"></script>
-<script type="text/javascript">
-  $(function () {
-    CKEDITOR.replace('ckeditor');
-  });
-</script>
-
-<!-- DateTimePicker -->
-<script src="<?php echo base_url('asset/'); ?>plugins/datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
-<script>
-  $('#picker').datetimepicker({
-    timepicker : true,
-    datepicker : true,
-    format : 'Y-m-d H:i:s',
-    yearStart : 2021
-  })
-</script>
-
 </body>
 </html>

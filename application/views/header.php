@@ -33,9 +33,6 @@
   <link rel="stylesheet" href="<?= base_url('asset/plugins/datatables-responsive/css/responsive.bootstrap4.min.css'); ?>">
   <link rel="stylesheet" href="<?= base_url('asset/plugins/datatables-buttons/css/buttons.bootstrap4.min.css'); ?>">
 
-  <!-- DareTimePicker -->
-  <link rel="stylesheet" type="text/css" href="<?= base_url('asset/plugins/datetimepicker/build/jquery.datetimepicker.min.css'); ?>">
-
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -45,7 +42,7 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"></a>
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
     </ul>
 

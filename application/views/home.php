@@ -36,9 +36,9 @@
 
         <div class="row">
           <div class="col-lg-12">
-          	<table id="" class="table table-bordered table-striped">
+          	<table class="table table-bordered">
               <thead>
-                <tr class="text-center">
+                <tr class="text-center table-secondary">
                   <th>No. Surat</th>
                   <th>Kategori</th>
                   <th>Judul</th>
@@ -70,14 +70,9 @@
   <div class="modal fade" id="hapus-<?= $a['id'] ?>">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title-centered">Alert</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h4 class="modal-title text-center">Apakah Anda yakin ingin menghapus arsip surat ini?</h4>
+        <div class="modal-body text-center">
+          <h4><i>Alert !!</i></h4> <br>
+          <h4 class="modal-title"><i>Apakah Anda yakin ingin menghapus arsip surat ini?</i></h4>
         </div>
         <div class="modal-footer">
           <div class="row col-lg-12">
@@ -101,15 +96,6 @@
                 <?php } ?>
 
               </tbody>
-              <tfoot>
-                <tr class="text-center">
-                  <th>No. Surat</th>
-                  <th>Kategori</th>
-                  <th>Judul</th>
-                  <th>Waktu Pengarsipan</th>
-                  <th>Aksi</th>
-                </tr>
-              </tfoot>
             </table>
           </div>
         </div>
