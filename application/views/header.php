@@ -55,7 +55,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="<?= base_url('Home') ?>" class="brand-link text-center">
+    <a href="#" class="brand-link text-center">
       <span class="brand-text font-weight-light"><b>M E N U</b></span>
     </a>
 
@@ -74,7 +74,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?= base_url('about') ?>" class="nav-link">
               <i class="nav-icon fas fa-info-circle"></i>
               <p>
                 About
