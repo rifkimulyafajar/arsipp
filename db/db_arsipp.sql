@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Agu 2021 pada 20.36
+-- Waktu pembuatan: 30 Agu 2021 pada 06.42
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.11
 
@@ -44,7 +44,7 @@ INSERT INTO `surat` (`id`, `nomor_surat`, `kategori`, `judul`, `file`, `waktu`) 
 (1, '2020/PD3/TU/001', 'Pengumuman', 'Nota Dinas WFH', '', '2021-06-21 17:23:00'),
 (4, '2020/PD2/TU/002', 'Undangan', 'Halal Bi Halal', '', '2021-04-21 18:23:29'),
 (5, '2021/PD2/TU/003', 'Undangan', 'Makan Bersama', '7_Undangan_Tk3_2020-2021.pdf', '2021-08-29 21:51:39'),
-(6, '2021/PD3/TU/004', 'Undangan', 'Perpanjangan PPKM', 'SOAL_TES_OBSERVASI_SERTIKOM_BNSP_2021.pdf', '2021-08-29 21:56:50');
+(6, '2021/PD2/TU/004', 'Undangan', 'Perpanjangan PPKM', 'SOAL_TES_OBSERVASI_SERTIKOM_BNSP_2021.pdf', '2021-08-29 21:56:50');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +64,7 @@ ALTER TABLE `surat`
 -- AUTO_INCREMENT untuk tabel `surat`
 --
 ALTER TABLE `surat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
