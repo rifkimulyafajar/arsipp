@@ -23,7 +23,7 @@
           	<img src="<?= base_url('asset/me.jpg') ?>" width="100%">
           </div>
           <div class="col-lg-8">
-          	<p>Aplikasi Ini Dibuat Oleh :</p>
+          	<p>Aplikasi ini dibuat Oleh :</p>
             <p>Nama : Rifki Mulya Fajar <br>
             NIM : 1831710096 <br>
             Tanggal : 28 Agustus 2021 </p>

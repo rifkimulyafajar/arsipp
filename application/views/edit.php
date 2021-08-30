@@ -73,7 +73,7 @@
 
               <div class="row">
                 <div class="col-lg-12">
-                  <a href="<?= base_url('c_arsip') ?>" class="btn bg-info"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i> &nbsp; Kembali</a>
+                  <a href=<?= base_url('c_arsip/detail/').$detail['id']; ?>" class="btn bg-info"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i> &nbsp; Kembali</a>
                   &nbsp;&nbsp;&nbsp;
                   <button type="submit" class="btn bg-success"><i class="fas fa-save"></i> &nbsp;&nbsp;&nbsp; Simpan</button>
                 </div>

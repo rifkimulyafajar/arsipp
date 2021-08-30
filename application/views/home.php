@@ -48,7 +48,15 @@
               </thead>
               <tbody>
 
-                <?php foreach ($arsip as $a) { ?>
+                <?php
+
+                if (empty($arsip)) { ?>
+                  
+                <h5 class="text-center"><b><i>Tidak ditemukan arsip surat dengan judul tersebut..!!</i></b></h5>
+
+                <?php } else {
+
+                foreach ($arsip as $a) { ?>
 
                 <tr>
                   <td><?= $a['nomor_surat'] ?></td>
@@ -93,7 +101,7 @@
 
                 </tr>
 
-                <?php } ?>
+                <?php } } ?>
 
               </tbody>
             </table>
